@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 mongoose.connect(
-
 );
 
 const UserSchema = new mongoose.Schema({
