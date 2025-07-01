@@ -1,11 +1,12 @@
-const express=require("express");
-const app=express();
-const mainRouter=require("./routes/user_route");
-const PORT=3000;
+const express = require("express");
+const app = express();
+const mainRouter = require("./routes");
+const cors = require("cors");
+const PORT = 3000;
 
-app.use("/api/v1",mainRouter);
-
+app.use(cors());
 app.use(express.json());
 
+app.use("/api/v1", mainRouter);
 
 app.listen(PORT);
